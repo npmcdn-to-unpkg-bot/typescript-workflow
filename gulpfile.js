@@ -19,7 +19,8 @@ gulp.task('app/js', function() {
   gulp.src(PATH.APP+PATH.SRC.JS)
       .pipe(ts({
         out: 'main.js',
-        noImplicitAny: true
+        noImplicitAny: true,
+        module: 'commonjs'
       }))
       .pipe(gulp.dest(PATH.BUILD+PATH.DEST.JS));
 });
