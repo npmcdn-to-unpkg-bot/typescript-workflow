@@ -1,4 +1,4 @@
 /// <reference path="References.ts" />
 
-var test = new Test.Test();
-console.log(test.ExplicitlyTyped(1));
+var test = new Test.TestClass();
+console.log(test.ImplementThis(true));

@@ -17,8 +17,9 @@ var PATH = {
 };
 
 gulp.task('app/js', function() {
+  console.log(tsConfig)
   gulp.src(PATH.APP+PATH.SRC.JS)
-      .pipe(ts(tsConfig))
+      .pipe(ts(tsConfig.compilerOptions))
       .pipe(gulp.dest(PATH.BUILD+PATH.DEST.JS));
 });
 

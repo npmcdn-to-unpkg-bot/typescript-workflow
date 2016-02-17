@@ -1,7 +1,9 @@
+/// <reference path="References.ts" />
+
 module Test {
-	export class Test {
-		ExplicitlyTyped(a: number): string {
-			return a.toString();
+	export class TestClass implements TestInterface {
+		ImplementThis(b: boolean) {
+			return !b;
 		}
 	}
 }
