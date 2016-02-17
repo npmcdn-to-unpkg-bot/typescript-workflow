@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+    	"out": "Main.js",
+        "module": "system",
+        "sourceMap": true,
+        "noImplicitAny": true
+    }
+}

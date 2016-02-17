@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var ts = require('gulp-typescript');
+var tsConfig = require('./tsconfig.json');
 
 var PATH = {
   APP: './app/',
@@ -17,11 +18,7 @@ var PATH = {
 
 gulp.task('app/js', function() {
   gulp.src(PATH.APP+PATH.SRC.JS)
-      .pipe(ts({
-        out: 'main.js',
-        noImplicitAny: true,
-        module: 'commonjs'
-      }))
+      .pipe(ts(tsConfig))
       .pipe(gulp.dest(PATH.BUILD+PATH.DEST.JS));
 });
 
